@@ -1,3 +1,26 @@
+body {
+    padding: 53px 0px 0px 0px;
+    z-index: 0;
+}
+
+.navbar-dark {
+    background-color: #512DA8;
+}
+
+.navbar-nav {
+    text-align: center;
+}
+
+.navbar-collapse.collapse.show ul:first-child {
+    border-top: 1px solid #dbdbdb;
+    /* margin-top: 10px; */
+  }
+
+.nav-item:hover {
+    background-color: #2d3539;
+}
+
+
 .row-header {
     margin: 0px auto;
     padding: 0px auto;
@@ -7,7 +30,7 @@
     margin: 0px auto;
     padding: 30px 0px 30px 0px;
     border-bottom: 1px ridge;
-    min-height: 200px;
+    min-height: 250px;
 }
 
 .footer {
