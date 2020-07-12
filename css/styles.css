@@ -16,10 +16,16 @@ body {
     /* margin-top: 10px; */
   }
 
-.nav-item:hover {
+  #Navbar > ul > li:hover {
     background-color: #2d3539;
 }
 
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
 
 .row-header {
     margin: 0px auto;
