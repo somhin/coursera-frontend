@@ -1,0 +1,81 @@
+body {
+    padding: 53px 0px 0px 0px;
+    z-index: 0;
+}
+
+.navbar-dark {
+    background-color: #512DA8;
+}
+
+.navbar-nav {
+    text-align: center;
+}
+
+.navbar-collapse.collapse.show ul:first-child {
+    border-top: 1px solid #dbdbdb;
+    /* margin-top: 10px; */
+  }
+
+  #Navbar > ul > li:hover {
+    background-color: #2d3539;
+}
+
+.carousel {
+    background: #512DA8;
+}
+
+.carousel-item {
+    height: 40vh;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+}
+
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.row-header {
+    margin: 0px auto;
+    padding: 0px auto;
+}
+
+.row-content {
+    margin: 0px auto;
+    padding: 30px 0px 30px 0px;
+    border-bottom: 1px ridge;
+    min-height: 250px;
+}
+
+.footer {
+    background-color: #ebebeb;
+    margin: 0px auto;
+    padding: 20px 0px 20px 0px;
+}
+
+.jumbotron {
+    padding: 70px 30px 70px 30px;
+    margin: 0px auto;
+    background: #876eb6;
+    color: floralwhite;
+}
+
+.address {
+    font-size: 80%;
+    margin: 0px;
+    color: #0f0f0f;
+}
+
+#carouselButton {
+    right: 0px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+}
