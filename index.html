@@ -156,10 +156,10 @@
                     <!-- send and cancel button -->
                     <div class="form-group row">
                         <div class="offset-md-2 col-md-12">
-                            <button type="cancel" data-dismiss="formModal" class="btn btn-secondary">
+                            <button type="button" data-dismiss="modal" class="btn btn-secondary">
                                 Cancel
                             </button>
-                            <button type="reserve" class="btn btn-primary">
+                            <button type="submit" class="btn btn-primary">
                                 Reserve
                             </button>
                         </div>
@@ -187,7 +187,7 @@
                     <br class="d-block d-sm-none">
                     
                     <!-- modal with tooltip (removed due requirement) -->
-                    <!-- <span  data-toggle="modal"
+                    <span  data-toggle="modal"
                         data-target="#formModal">
                     <a  role="button"
                         class="btn btn-warning btn-block"
@@ -198,14 +198,14 @@
                         type="reserve">
                             Reserve Table
                     </a>
-                    </span> -->
+                    </span>
 
                     <!-- modal only -->
-                    <a  role="button" 
+                    <!-- <a  role="button" 
                         data-toggle="modal"
                         data-target="#formModal"
                         class="btn btn-warning btn-block">
-                        Reserve table</a>
+                        Reserve table</a> -->
                 </div>
             </div>
         </div>
@@ -252,8 +252,18 @@
                     <a href="#mycarousel" class="carousel-control-next" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
-                </div>
+                    <div class="btn-group" id="carouselButton">
+                            <button class="btn btn-danger btn-sm" id="carousel-pause">
+                                <span class="fa fa-pause"></span>
+                            </button>
+                            <button class="btn btn-danger btn-sm" id="carousel-play">
+                                <span class="fa fa-play"></span>
+                            </button>
+                    </div>
+                 </div>
+                 
             </div>
+            
         </div>
 
         <div class="row row-content align-item-center">
@@ -351,11 +361,24 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <!-- <script>
+    <!-- carousel control -->
+    <script>
+        $(document).ready(function() {
+            $('#mycarousel').carousel({interval: 5000})
+            $('#carousel-pause').click(function() {
+                $('#mycarousel').carousel('pause');
+            });
+            $('#carousel-play').click(function() {
+                $('#mycarousel').carousel('cycle');
+            });
+        })
+    </script>
+    <!-- tooltip -->
+    <script>
         $(document).ready(function() {
             $('[data-toggle="tooltip"').tooltip();
         });
-    </script> -->
+    </script>
 </body>
 
 </html>
