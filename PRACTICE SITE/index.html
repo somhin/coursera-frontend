@@ -29,7 +29,8 @@
                     <li class="nav-item"><a href="./contactus.html" class="nav-link">Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a href="" data-toggle="modal" data-target="#loginModal">
+                    <!-- <a href="" data-toggle="modal" data-target="#loginModal"> -->
+                    <a id="loginModalButton" href="#loginModal">
                         <span class="fa fa-sign-in"> Login</span>
                     </a>
                 </span>
@@ -187,7 +188,7 @@
                     <br class="d-block d-sm-none">
                     
                     <!-- modal with tooltip (removed due requirement) -->
-                    <span  data-toggle="modal"
+                    <!-- <span  data-toggle="modal"
                         data-target="#formModal">
                     <a  role="button"
                         class="btn btn-warning btn-block"
@@ -198,14 +199,14 @@
                         type="reserve">
                             Reserve Table
                     </a>
-                    </span>
+                    </span> -->
 
                     <!-- modal only -->
-                    <!-- <a  role="button" 
-                        data-toggle="modal"
-                        data-target="#formModal"
+                    <a  role="button" 
+                        href="#formModal"
+                        id="formModalButton"
                         class="btn btn-warning btn-block">
-                        Reserve table</a> -->
+                        Reserve table</a>
                 </div>
             </div>
         </div>
@@ -408,6 +409,17 @@
     <script>
         $(document).ready(function() {
             $('[data-toggle="tooltip"').tooltip();
+        });
+    </script>
+    <!-- trigger modal via Javascript -->
+    <script>
+        $(document).ready(function() {
+            $("#loginModalButton").click(function() {
+                $("#loginModal").modal();
+            });
+            $("#formModalButton").click(function () {
+                $("#formModal").modal();
+            });
         });
     </script>
 </body>
