@@ -1,16 +1,30 @@
 {
-  "name": "practice-frontend-site",
+  "name": "practice-site",
   "version": "1.0.0",
-  "description": "practice frontend web development along with coursera tutorial",
+  "description": "FrontEnd course practice directory",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.13.1",
     "bootstrap-icons": "^1.0.0-alpha5",
-    "bootstrap-social": "^5.1.1"
-  }
+    "bootstrap-social": "^5.1.1",
+    "node-sass": "^4.14.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -o css/ css/"
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/somhin/coursera-frontend.git"
+  },
+  "keywords": [
+    "Frontend"
+  ],
+  "author": "Limprasutr,Phitat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/somhin/coursera-frontend/issues"
+  },
+  "homepage": "https://github.com/somhin/coursera-frontend#readme"
 }
