@@ -1,0 +1,19 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "React practice",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/somhin/coursera-frontend.git"
+  },
+  "author": "Limprasutr,Phipat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/somhin/coursera-frontend/issues"
+  },
+  "homepage": "https://github.com/somhin/coursera-frontend#readme"
+}
