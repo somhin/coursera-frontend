@@ -6,8 +6,10 @@ class DishDetail extends Component {
     render() {
         const {dish} = this.props;
         return(
-            <div className="row">
-                {this.renderDish(dish)}
+            <div className="container">
+                <div className="row">
+                    {this.renderDish(dish)}
+                </div>
             </div>
         )
     }
@@ -42,7 +44,7 @@ class DishDetail extends Component {
                 return (
                     <ul className="list-unstyled" key={comment.id}>
                         <li>{comment.comment}</li>
-                        <li>-- {comment.author}, {this.formatDate(comment.date)}</li>
+                        <li>-- {comment.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</li>
                     </ul>
                     )
             })
@@ -57,13 +59,6 @@ class DishDetail extends Component {
             return <div></div>
         }
     }
-
-    formatDate(date) {
-    const option = {year: 'numeric', month: 'short', day: 'numeric' };
-    const date1 = new Date(date)
-    const newdate = date1.toLocaleDateString("en-US", option)
-    return newdate;
-}
 
 }
 
