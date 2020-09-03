@@ -2,16 +2,16 @@ import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-function RenderLeader(props) {
+function RenderLeader({leader}) {
     return(
         <Media tag="li" className="mt-3">
             <Media left middle>
-                <Media object src={props.leader.image} alt={props.leader.name} />
+                <Media object src={leader.image} alt={leader.name} />
             </Media>
             <Media body className="ml-5">
-                <Media heading>{props.leader.name}</Media>
-                <p>{props.leader.designation}</p>
-                <p>{props.leader.description}</p>
+                <Media heading>{leader.name}</Media>
+                <p>{leader.designation}</p>
+                <p>{leader.description}</p>
             </Media>
         </Media>
     )
