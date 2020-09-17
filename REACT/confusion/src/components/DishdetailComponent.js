@@ -47,7 +47,7 @@ const DishDetail = (props) => {
                     <div className="col-md-5 col-12 m-1">
                         <h4>Comments</h4>
                     <RenderComments comments={props.comments}
-                                    addComment={props.addComment}
+                                    postComment={props.postComment}
                                     dishId={props.dish.id} />
                     </div>
                 </div>
@@ -75,7 +75,7 @@ function RenderDish({dish}) {
     }
 }
 
-function RenderComments({comments, addComment, dishId}) {
+function RenderComments({comments, postComment, dishId}) {
     if (comments != null) {
         const comment = comments.map(comment => {
             return (
@@ -91,7 +91,7 @@ function RenderComments({comments, addComment, dishId}) {
             <ul className="list-unstyled">
                 <li>{comment}</li>
             </ul>
-            <CommentForm dishId={dishId} addComment={addComment} />
+            <CommentForm dishId={dishId} postComment={postComment} />
         </React.Fragment>
     )
 
@@ -123,7 +123,7 @@ class CommentForm extends Component {
 
     handleCommentSubmit(values) {
         this.toggleComment();
-        this.props.addComment(this.props.dishId, values.rating, values.author, values.comment);
+        this.props.postComment(this.props.dishId, values.rating, values.author, values.comment);
     }
 
     render() {
