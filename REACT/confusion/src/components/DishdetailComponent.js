@@ -3,6 +3,7 @@ import { Card, CardImg, CardText, CardBody, CardTitle, BreadcrumbItem, Breadcrum
 import { Link } from 'react-router-dom'
 import { Control, LocalForm, Errors } from 'react-redux-form'
 import { Loading } from './LoadingComponent'
+import { baseUrl } from '../shared/baseUrl'
 
 const DishDetail = (props) => {
     if (props.isLoading) {
@@ -60,7 +61,7 @@ function RenderDish({dish}) {
             <React.Fragment>
                 <div className="col-md-6 col-12 m-1">
                     <Card>
-                        <CardImg width="100%" object src={dish.image} alt={dish.name}/>
+                        <CardImg width="100%" object src={baseUrl + dish.image} alt={dish.name}/>
                         <CardBody>
                             <CardTitle>{dish.name}</CardTitle>
                             <CardText>{dish.description}</CardText>
