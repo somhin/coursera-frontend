@@ -3,9 +3,11 @@ import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'r
 import { Link } from 'react-router-dom';
 import { Loading } from './LoadingComponent'
 import { baseUrl } from '../shared/baseUrl'
+import { Fade, Stagger } from 'react-animation-components'
 
 function RenderLeader({leader}) {
     return(
+        <Fade in>
         <Media tag="li" className="mt-3">
             <Media left middle>
                 <Media object src={baseUrl + leader.image} alt={leader.name} />
@@ -16,6 +18,7 @@ function RenderLeader({leader}) {
                 <p>{leader.description}</p>
             </Media>
         </Media>
+        </Fade>
     )
 }
 
@@ -23,9 +26,7 @@ function About(props) {
 
     const leaders = props.leaders.leaders.map((leader) => {
         return (
-            <React.Fragment>
-                <RenderLeader leader={leader} />
-            </React.Fragment>
+            <RenderLeader leader={leader} />
         );
     });
 
@@ -101,9 +102,11 @@ function About(props) {
                     <h2>Corporate Leadership</h2>
                 </div>
                 <div className="col-12">
-                    <Media list>
-                        {leaders}
-                    </Media>
+                    <Stagger in>
+                        <Media list>
+                            {leaders}
+                        </Media>
+                    </Stagger>
                 </div>
             </div>
         </div>
